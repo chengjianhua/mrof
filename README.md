@@ -72,7 +72,7 @@ Thanks goes to these people ([emoji key][emojis]):
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 
 <!-- prettier-ignore -->
-| [<img src="https://avatars.githubusercontent.com/u/1500684?v=3" width="100px;"/><br /><sub><b>Jianhua Cheng</b></sub>](https://chengjianhua.com)<br />[💻](https://github.com/chengjianhua/mrof/commits?author=chengjianhua "Code") [📖](https://github.com/chengjianhua/mrof/commits?author=chengjianhua "Documentation") [🚇](#infra-chengjianhua "Infrastructure (Hosting, Build-Tools, etc)") [⚠️](https://github.com/chengjianhua/mrof/commits?author=chengjianhua "Tests") |
+| [<img src="https://avatars.githubusercontent.com/u/10795207?v=3" width="100px;"/><br /><sub><b>Jianhua Cheng</b></sub>](https://chengjianhua.com)<br />[💻](https://github.com/chengjianhua/mrof/commits?author=chengjianhua "Code") [📖](https://github.com/chengjianhua/mrof/commits?author=chengjianhua "Documentation") [🚇](#infra-chengjianhua "Infrastructure (Hosting, Build-Tools, etc)") [⚠️](https://github.com/chengjianhua/mrof/commits?author=chengjianhua "Tests") |
 | :---: |
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
