@@ -16,7 +16,9 @@
     "test:update": "npm test -- --updateSnapshot --coverage",
     "validate": "kcd-scripts validate",
     "setup": "npm install && npm run validate -s",
-    "precommit": "kcd-scripts precommit"
+    "precommit": "kcd-scripts precommit",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "files": ["dist"],
   "keywords": [],
@@ -31,6 +33,14 @@
     "warning": "^3.0.0"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.3",
+    "@storybook/addon-info": "^3.4.3",
+    "@storybook/addon-links": "^3.4.3",
+    "@storybook/addon-notes": "^3.4.3",
+    "@storybook/addons": "^3.4.3",
+    "@storybook/react": "^3.4.3",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
     "kcd-scripts": "^0.36.1",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",

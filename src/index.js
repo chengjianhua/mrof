@@ -1,3 +1,5 @@
 import create from './create'
 
-export default {create}
+const lib = {create}
+
+export default lib

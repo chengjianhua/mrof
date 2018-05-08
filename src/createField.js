@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const identity = v => v
 
 function createField({store}) {
-  class ControlledField extends Component {
+  class Field extends Component {
     static propTypes = {
       children: PropTypes.node,
       name: PropTypes.string.isRequired,
@@ -93,11 +93,11 @@ function createField({store}) {
       const fieldProps = this.getFieldProps()
       const renderer = render || children
 
-      return renderer({...controllableProps, ...fieldProps})
+      return renderer(controllableProps, fieldProps)
     }
   }
 
-  return ControlledField
+  return Field
 }
 
 export default createField
