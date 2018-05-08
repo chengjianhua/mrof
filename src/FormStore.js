@@ -1,4 +1,7 @@
-import {set, isEqual} from 'lodash-es'
+import equals from 'ramda/es/equals'
+import set from 'ramda/es/set'
+import lensPath from 'ramda/es/lensPath'
+
 import warning from 'warning'
 
 class FormStore {
@@ -13,7 +16,8 @@ class FormStore {
     const keys = Object.keys(fields)
 
     const values = keys.reduce(
-      (acc, fieldPath) => set(acc, fieldPath, fields[fieldPath].value),
+      (acc, fieldPath) =>
+        set(lensPath(fieldPath.split('.')), fields[fieldPath].value, acc),
       {},
     )
 
@@ -30,7 +34,7 @@ class FormStore {
       return Object.assign(acc, {[fieldName]: error})
     }, {})
 
-    return isEqual(result, {}) ? null : result
+    return equals(result, {}) ? null : result
   }
 
   removeField(field) {

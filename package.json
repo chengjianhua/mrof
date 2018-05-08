@@ -10,7 +10,7 @@
   },
   "scripts": {
     "add-contributor": "kcd-scripts contributors add",
-    "build": "kcd-scripts build --bundle",
+    "build": "BUILD_TREESHAKE=true kcd-scripts build --bundle",
     "lint": "kcd-scripts lint",
     "test": "kcd-scripts test",
     "test:update": "npm test -- --updateSnapshot --coverage",
@@ -26,6 +26,7 @@
   "dependencies": {
     "invariant": "^2.2.4",
     "lodash-es": "^4.17.10",
+    "ramda": "^0.25.0",
     "recompose": "^0.27.0",
     "warning": "^3.0.0"
   },
