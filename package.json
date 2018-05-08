@@ -10,7 +10,7 @@
   },
   "scripts": {
     "add-contributor": "kcd-scripts contributors add",
-    "build": "kcd-scripts build",
+    "build": "kcd-scripts build --bundle",
     "lint": "kcd-scripts lint",
     "test": "kcd-scripts test",
     "test:update": "npm test -- --updateSnapshot --coverage",
@@ -21,14 +21,30 @@
   "files": ["dist"],
   "keywords": [],
   "author":
-    "Jianhua Cheng <w.chengjianhua@gmail.com> (http://chengjianhua.com/)",
+    "Jianhua Cheng <w.chengjianhua@gmail.com> (http://chengjianhua.github.io)",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "invariant": "^2.2.4",
+    "lodash-es": "^4.17.10",
+    "recompose": "^0.27.0",
+    "warning": "^3.0.0"
+  },
   "devDependencies": {
-    "kcd-scripts": "^0.36.1"
+    "kcd-scripts": "^0.36.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
   },
   "eslintConfig": {
-    "extends": "./node_modules/kcd-scripts/eslint.js"
+    "extends": "./node_modules/kcd-scripts/eslint.js",
+    "rules": {
+      "no-unused-vars": [
+        "error",
+        {
+          "ignoreRestSiblings": true
+        }
+      ]
+    }
   },
   "eslintIgnore": ["node_modules", "coverage", "dist"],
   "repository": {
@@ -38,5 +54,9 @@
   "bugs": {
     "url": "https://github.com/chengjianhua/mrof/issues"
   },
-  "homepage": "https://github.com/chengjianhua/mrof#readme"
+  "homepage": "https://github.com/chengjianhua/mrof#readme",
+  "peerDependencies": {
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2"
+  }
 }
