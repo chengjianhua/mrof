@@ -5,9 +5,9 @@ import {storiesOf} from '@storybook/react'
 import {withInfo} from '@storybook/addon-info'
 import {Button} from '@storybook/react/demo'
 
-import mrof from '../src'
+import {create} from '../src'
 
-const {Form, Field} = mrof.create()
+const {Form, Field} = create()
 
 storiesOf('Form', module).add(
   'Provider',
