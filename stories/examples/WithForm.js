@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import React, {Component} from 'react'
 
-import {Field, withForm} from '../../src'
+import withForm from '../../src/withForm'
+import Field from '../../src/Field'
 
 class WithFormExample extends Component {
   handleSubmit = e => {
@@ -43,4 +44,6 @@ class WithFormExample extends Component {
   }
 }
 
-export default withForm()(WithFormExample)
+const Form = withForm()(WithFormExample)
+
+export default Form

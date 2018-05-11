@@ -16,17 +16,10 @@ class Field extends Component {
       touched: PropTypes.bool,
       value: PropTypes.any,
     }),
-    transformer: PropTypes.arrayOf(PropTypes.func),
-    rule: PropTypes.func,
-    trigger: PropTypes.string,
+    transformer: PropTypes.arrayOf(PropTypes.func).isRequired,
+    rule: PropTypes.func.isRequired,
+    trigger: PropTypes.string.isRequired,
     render: PropTypes.func.isRequired,
-  }
-
-  static defaultProps = {
-    children: null,
-    transformer: [identity, identity],
-    rule: false,
-    trigger: 'onChange',
   }
 
   constructor(props, context) {
@@ -121,7 +114,7 @@ class Field extends Component {
   }
 }
 
-export default React.forwardRef(function FieldWrapper(props, ref) {
+const FieldWrapper = React.forwardRef(function FieldWrapper(props, ref) {
   const {name} = props
 
   return (
@@ -132,3 +125,24 @@ export default React.forwardRef(function FieldWrapper(props, ref) {
     </FormContext.Consumer>
   )
 })
+
+FieldWrapper.propTypes = {
+  form: PropTypes.shape({
+    setField: PropTypes.func.isRequired,
+  }).isRequired,
+  children: PropTypes.node,
+  name: PropTypes.string.isRequired,
+  transformer: PropTypes.arrayOf(PropTypes.func),
+  rule: PropTypes.func,
+  trigger: PropTypes.string,
+  render: PropTypes.func.isRequired,
+}
+
+FieldWrapper.defaultProps = {
+  children: null,
+  transformer: [identity, identity],
+  rule: false,
+  trigger: 'onChange',
+}
+
+export default FieldWrapper

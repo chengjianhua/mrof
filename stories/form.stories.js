@@ -6,50 +6,25 @@ import {withInfo} from '@storybook/addon-info'
 import {Button} from '@storybook/react/demo'
 
 import {create} from '../src'
+import Field from '../src/Field'
 
 import WithForm from './examples/WithForm'
 
-const {Form, Field} = create()
-
 storiesOf('Form', module)
   .add(
-    'Provider',
-    withInfo(`
-    haha
-`)(() => {
-      return (
-        <Form
-          onSubmit={(...args) => {
-            console.log(args)
-          }}
-        >
-          <Field
-            name="name"
-            rule={({value, values}) => {
-              console.log({value, values})
-
-              if (!value) return 'is required'
-
-              return null
-            }}
-          >
-            {(props, field) => {
-              console.log({...props, ...field})
-
-              return <input {...props} />
-            }}
-          </Field>
-
-          <button type="submit">Submit</button>
-        </Form>
-      )
+    'Button',
+    withInfo(``)(() => {
+      return <Button>haha</Button>
     }),
   )
   .add(
     'withForm',
-    withInfo(`
-    Use the hoc to wrap the children
-  `)(() => {
+    withInfo({
+      text: `
+Use the hoc to wrap the children
+      `,
+      propTables: [Field],
+    })(() => {
       return <WithForm />
     }),
   )
