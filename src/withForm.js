@@ -26,6 +26,7 @@ export default function withForm() {
         }
 
         removeField = fieldName => {
+          // eslint-disable-next-line no-unused-vars
           const {[fieldName]: deletedField, ...newFields} = this.state.fields
 
           this.setState({fields: newFields})

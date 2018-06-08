@@ -119,7 +119,7 @@ const FieldWrapper = React.forwardRef(function FieldWrapper(props, ref) {
 
   return (
     <FormContext.Consumer>
-      {({fields, ...form}) => (
+      {({fields: _fields, ...form}) => (
         <Field {...props} field={form.getField(name)} form={form} ref={ref} />
       )}
     </FormContext.Consumer>
