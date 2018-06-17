@@ -22,7 +22,7 @@
 
 ## The problem
 
-// TODO
+We have to face the fact that the operations of form in react is verbose. Most form implementations I saw are too heavy and take some patterns that I don't satisfy with. `mrof` is a succinct implementation and offers intuitive and handy APIs.
 
 ## This solution
 
