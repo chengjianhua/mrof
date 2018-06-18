@@ -1,7 +1,7 @@
 <div align="center">
 <h1>mrof</h1>
 
-<p>A two-way binding form implementation and give the ability to vaidate the form inputs.</p>
+<p>A two-way binding form implementation and give the ability to validate the form inputs.</p>
 </div>
 
 <hr />
