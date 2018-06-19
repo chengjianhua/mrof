@@ -5,7 +5,6 @@ import {storiesOf} from '@storybook/react'
 import {withInfo} from '@storybook/addon-info'
 import {Button} from '@storybook/react/demo'
 
-import {create} from '../src'
 import Field from '../src/Field'
 
 import WithForm from './examples/WithForm'
