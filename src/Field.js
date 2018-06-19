@@ -98,17 +98,12 @@ class Field extends Component {
     const controllableProps = this.getControllableProps()
     const fieldProps = this.getFieldProps()
 
-    if (render) {
-      return render(controllableProps, fieldProps)
-    }
+    if (render) return render(controllableProps, fieldProps)
 
-    if (typeof children === 'function') {
+    if (typeof children === 'function')
       return children(controllableProps, fieldProps)
-    }
 
-    if (children) {
-      return React.cloneElement(children, {...controllableProps})
-    }
+    if (children) return React.cloneElement(children, {...controllableProps})
 
     return null
   }
